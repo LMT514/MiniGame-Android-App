@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".game2048.Game2048Activity">
+
+    <TextView
+        android:id="@+id/highScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scoreTextView"
+        android:text="High Score: 0"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="24sp" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:background="#BBADA0"
+        android:columnCount="4"
+        android:gravity="center"
+        android:padding="4dp"
+        android:rowCount="4">
+
+        <!-- Cells will be added programmatically -->
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/upButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_light"
+            android:src="@drawable/top_arrow" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/leftButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_light"
+            android:src="@drawable/left_arrow" />
+
+        <ImageButton
+            android:id="@+id/downButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_light"
+            android:src="@drawable/bottom_arrow" />
+
+        <ImageButton
+            android:id="@+id/rightButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_light"
+            android:src="@drawable/right_arrow" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTintMode="src_in"
+        android:text="New Game" />
+</LinearLayout>

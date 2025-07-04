@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#E1F5FE"
+             android:padding="10dp">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                 <ImageButton
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/restart"
+                     android:onClick="restart" />
+                 <View
+                     android:layout_width="1dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"/>
+                 <ImageButton
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/exit"
+                     android:onClick="exit" />
+
+             </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/tohighscore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/highscore" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivNewHighest"
+                    android:visibility="gone"
+                    android:background="@drawable/new_height" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!-- Row for current points -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="YOUR POINTS: "
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tvPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="50sp" />
+
+                    </TableRow>
+
+                    <!-- Row for highest score -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:text="Highest: "
+                            android:textSize="34sp" />
+
+                        <TextView
+                            android:id="@+id/tvHighest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="34sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="80dp" />
+            </LinearLayout>
+
+</LinearLayout>

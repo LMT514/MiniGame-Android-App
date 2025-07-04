@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sudoku.SudokuActivity">
+
+    <LinearLayout
+        android:id="@+id/TextLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        custom:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/app_name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="@string/score"
+            android:textAlignment="textEnd"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <com.example.sehs4542group3.sudoku.SudokuBoard
+        android:id="@+id/SudokuBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        custom:boardColor="#000000"
+        custom:cellFillColor="#93CDE8"
+        custom:cellsHighlightColor="#41c0e1"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintHorizontal_bias="0.0"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/TextLinearLayout"
+        custom:letterColor="#000000"
+        custom:letterColorIncorrect="#FF0000"
+        custom:letterColorSolve="#62A059">
+
+
+    </com.example.sehs4542group3.sudoku.SudokuBoard>
+
+    <LinearLayout
+        android:id="@+id/ButtonLinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        custom:layout_constraintStart_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/SudokuBoard">
+
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#BF5E5E"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/One"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp" />
+
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#A24646"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Two"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Three"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ButtonLinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        custom:layout_constraintStart_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/ButtonLinearLayout1">
+
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Four"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#009688"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Five"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#CDDC39"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Six"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ButtonLinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        custom:layout_constraintStart_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/ButtonLinearLayout2">
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Seven"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF5722"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Eight"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#673AB7"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/Nine"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            custom:iconPadding="0dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/solveButton"
+        android:layout_width="112dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#7EF9FF"
+        android:text="@string/reset"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintHorizontal_bias="0.919"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/ButtonLinearLayout3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
